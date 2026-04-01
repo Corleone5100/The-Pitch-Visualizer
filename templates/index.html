@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pitch Visualizer | AI Storyboard Generator</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="nav-brand">
+                <span class="nav-logo">🎨</span>
+                <h1 class="nav-title">Pitch<span class="text-gradient">Visualizer</span></h1>
+            </div>
+            <span class="nav-subtitle">✨ AI-Powered Storyboard Generator</span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Generator Card (Input Section) -->
+            <section class="generator-card">
+                <h2 class="section-title">
+                    <span class="section-title-icon">📝</span>
+                    Create Your Pitch Deck
+                </h2>
+                <p class="section-description">
+                    Transform your customer success stories into compelling visual storyboards with AI
+                </p>
+                
+                <form id="generatorForm">
+                    <div class="form-group">
+                        <label for="narrativeInput" class="form-label">
+                            Customer Success Story / Narrative
+                            <span class="form-label-required">*</span>
+                        </label>
+                        <textarea 
+                            id="narrativeInput" 
+                            class="form-textarea"
+                            placeholder="e.g., The marketing team at TechCorp was drowning in manual reports, spending 20 hours weekly on data entry. Errors were rampant and morale was at an all-time low. Then they discovered our AI automation platform. Within weeks, the team transformed their workflow. Now they spend just 2 hours weekly on reports, error rates dropped 95%, and the team focuses on strategic creative work instead."
+                            rows="5"
+                            required
+                        ></textarea>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="styleSelect" class="form-label">
+                                Visual Style
+                            </label>
+                            <select id="styleSelect" class="form-select">
+                                <option value="corporate vector art style, flat design, modern business illustration, clean lines, minimal">Corporate Flat Vector (Modern Pitch)</option>
+                                <option value="rough pencil storyboard sketch, professional film pre-production, black and white ink">Storyboard Pencil Sketch</option>
+                                <option value="cinematic photography, soft corporate lighting, professional business environment, 8k">Cinematic Corporate Photography</option>
+                                <option value="3d isometric tech illustration, colorful, modern startup vibe, highly detailed">3D Isometric Startup Style</option>
+                                <option value="digital art, vibrant colors, modern tech aesthetic, clean design">Digital Art (Vibrant)</option>
+                                <option value="photorealistic, dramatic lighting, professional portrait style">Photorealistic Portrait</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" id="generateBtn" class="btn btn-primary" style="width: 100%">
+                                <span class="btn-icon">✨</span>
+                                <span>Generate Storyboard</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            
+            <!-- Loading State -->
+            <section id="loadingContainer" class="loading-container">
+                <div class="loading-spinner"></div>
+                <h3 class="loading-title">Creating Your Storyboard</h3>
+                <p class="loading-text">
+                    Our AI is analyzing your narrative, extracting story elements, and generating custom visuals
+                </p>
+                
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <p id="progressStatus" class="progress-status"></p>
+            </section>
+            
+            <!-- Storyboard Results -->
+            <section id="storyboardSection" class="storyboard-section">
+                <div class="storyboard-header">
+                    <h2 class="storyboard-title">
+                        <span class="section-title-icon">🎬</span>
+                        Your Generated Storyboard
+                    </h2>
+                    <p class="storyboard-subtitle">
+                        AI-powered visual narrative created from your story
+                    </p>
+                </div>
+                
+                <div id="storyboardGrid" class="storyboard-grid">
+                    <!-- Storyboard cards will be injected here by JavaScript -->
+                </div>
+            </section>
+            
+            <!-- Empty State (shown initially) -->
+            <div id="emptyState" class="empty-state">
+                <div class="empty-state-icon">🎨</div>
+                <h3 class="empty-state-title">Your storyboard will appear here</h3>
+                <p class="empty-state-text">
+                    Enter your narrative above and click "Generate Storyboard" to create your visual pitch deck
+                </p>
+            </div>
+            
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>🚀 Powered by AI • Built with FastAPI & Stable Diffusion</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

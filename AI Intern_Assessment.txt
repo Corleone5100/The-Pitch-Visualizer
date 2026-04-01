@@ -1,0 +1,135 @@
+🎙️
+
+Challenge 1: The Empathy Engine: Giving AI a Human
+Voice
+I. Vision & Context
+In the world of AI-driven sales and customer interaction, communication is everything. While our
+models can understand and generate text with incredible accuracy, the final step the voice often falls
+into the "uncanny valley." Standard Text-to-Speech (TTS) systems are functional but robotic. They
+lack prosody, emotional range, and the subtle vocal cues that build trust and rapport. This emotional
+disconnect can be the difference between a successful interaction and a frustrating one.
+Imagine an AI assistant that can sound genuinely enthusiastic about good news, or patient and calm
+when a customer is frustrated. This is the future of voice interaction. Your challenge is to build the
+core of that future.
+
+II. Formal Problem Statement
+The objective is to design and build a service, "The Empathy Engine," that dynamically modulates the
+vocal characteristics of synthesized speech based on the detected emotion of the source text. The
+service must successfully bridge the gap between text-based sentiment and expressive, human-like
+audio output, moving beyond monotonic delivery to achieve emotional resonance.
+
+III. Core Functional Requirements (Must-Haves)
+Your final submission must satisfy the following criteria to be eligible for evaluation:
+1.​ Text Input: The service must accept a string of text as its primary input (e.g., via a CLI prompt
+or an API endpoint).
+2.​ Emotion Detection: It must analyze the input text and classify it into at least three distinct
+emotional categories (e.g., Positive/Happy, Negative/Frustrated, Neutral).
+3.​ Vocal Parameter Modulation: The service must programmatically alter at least two distinct
+vocal parameters of the TTS output. Common parameters include:
+○​ Rate: The speed at which the text is spoken.
+○​ Pitch: The tonal height of the voice.
+○​ Volume: The amplitude of the voice.
+4.​ Emotion-to-Voice Mapping: A clear and demonstrable logic must exist that maps the detected
+emotion to a specific configuration of the chosen vocal parameters.
+5.​ Audio Output: The service must generate a playable audio file (e.g., .wav, .mp3) as its final
+output.
+
+IV. Bonus Objectives & Stretch Goals (Ways to "Wow" the Judges)
+To distinguish your project, consider implementing one or more of the following:
+●​ Granular Emotions: Expand your emotion detection beyond a simple positive/negative/neutral
+model to include more nuanced states like inquisitive, surprised, or concerned.
+●​ Intensity Scaling: Implement logic where the intensity of the emotion affects the degree of
+modulation. For example, "This is good" might have a slight pitch increase, while "This is the
+best news ever!" would have a much more significant change in rate and pitch.
+●​ Web Interface: Build a simple web UI (using Flask, FastAPI, etc.) with a text area for input and
+
+an embedded audio player to demonstrate the result instantly.
+●​ SSML Integration: For advanced control, use Speech Synthesis Markup Language (SSML) to
+control emphasis, pauses, and phonetics within the text itself.
+
+V. Suggested Technical Stack & Resources
+●​ Primary Language: Python
+●​ Emotion/Sentiment Analysis:
+○​ Libraries like TextBlob or VADER for basic sentiment.
+○​ Hugging Face transformers library for more sophisticated, pre-trained emotion classification
+models.
+●​ Text-to-Speech (TTS) Engines:
+○​ Offline: pyttsx3 (excellent for rapid, local prototyping).
+○​ Online/API-based: gTTS (Google Text-to-Speech Python library), Google Cloud TTS API,
+or ElevenLabs API for highly expressive voices.
+●​ API Framework (for interface): Flask or FastAPI.
+
+VI. Deliverables
+1.​ A single GitHub repository URL containing your complete, runnable source code.
+2.​ A comprehensive README.md file that includes:
+○​ A brief description of your project.
+○​ Clear, step-by-step instructions on how to set up the environment and run your application.
+○​ Notes on your design choices, especially the logic you used for mapping emotions to voice
+parameters.
+
+🖼️
+
+Challenge 2: The Pitch Visualizer: From Words to
+Storyboard
+I. Vision & Context
+A powerful narrative is the cornerstone of any effective sales pitch. Storytelling transforms abstract
+features into tangible benefits. However, the process of translating a well-crafted narrative into a
+compelling visual aid—like a storyboard or a slide deck—is a significant creative and logistical
+bottleneck. It requires manual effort, design skills, and time that sales teams rarely have.
+What if we could automate this creative process? Imagine being able to paste a customer success story
+and instantly receive a visual storyboard that brings it to life. This tool would empower teams to
+create personalized, visually engaging content at an unprecedented scale.
+
+II. Formal Problem Statement
+The objective is to design and build a service, "The Pitch Visualizer," that ingests a block of narrative
+text, deconstructs it into key moments, and programmatically generates a multi-panel visual
+storyboard. The core of this challenge lies in the intelligent translation of textual concepts into
+effective, descriptive prompts for an AI image generation model.
+
+III. Core Functional Requirements (Must-Haves)
+Your final submission must satisfy the following criteria to be eligible for evaluation:
+1.​ Text Input: The service must accept a block of text (e.g., a paragraph of 3-5 sentences) as its
+primary input.
+2.​ Narrative Segmentation: It must algorithmically break the input text into at least three logical
+scenes or key phrases. A simple sentence-by-sentence split is an acceptable baseline.
+3.​ Intelligent Prompt Engineering: For each text segment, the service must generate a new,
+enhanced prompt to feed to the image model. Simply using the original sentence verbatim as
+the prompt is insufficient. The engineered prompt should be more visually descriptive.
+4.​ Image Generation: The service must successfully call a text-to-image API or model to generate
+a unique image for each engineered prompt.
+5.​ Storyboard Presentation: The final output must be presented as a coherent visual sequence. A
+simple HTML page displaying each image with its corresponding text segment as a caption is
+the ideal format.
+
+IV. Bonus Objectives & Stretch Goals (Ways to "Wow" the Judges)
+To distinguish your project, consider implementing one or more of the following:
+●​ Visual Consistency: This is a classic challenge in AI art. Attempt to maintain a consistent
+artistic style (e.g., "digital art," "photorealistic") or even character features across the generated
+panels. You could achieve this by appending style keywords to every prompt.
+●​ User-Selectable Styles: Add an option for the user to choose a visual style before generating the
+storyboard.
+●​ LLM-Powered Prompt Refinement: Use a secondary LLM (like Gemini) to "supercharge"
+your prompt engineering. Feed it the basic sentence and ask it to return a highly detailed, artistic,
+and visually imaginative prompt.
+●​ Dynamic UI: Build a simple web interface where a user can paste their text, click "Generate,"
+and see the storyboard appear panel by panel.
+
+V. Suggested Technical Stack & Resources
+●​ Primary Language: Python
+●​ Text Segmentation: NLTK (Natural Language Toolkit) or spaCy for sentence tokenization.
+●​ Image Generation Models/APIs:
+○​ OpenAI API (DALL-E 3)
+○​ Stability AI API (Stable Diffusion)
+○​ Hugging Face diffusers library with an open-source model.
+○​ Note: You will likely need to manage API keys.
+●​ Web Framework & Templating: Flask or FastAPI, with Jinja2 for rendering the final HTML
+storyboard.
+
+VI. Deliverables
+1.​ A single GitHub repository URL containing your complete, runnable source code.
+2.​ A comprehensive README.md file that includes:
+○​ A brief description of your project and its capabilities.
+○​ Clear, step-by-step instructions for setup (including API key management) and execution.
+○​ Notes on your design choices, especially your methodology for prompt engineering.
+
+

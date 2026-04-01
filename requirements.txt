@@ -1,0 +1,38 @@
+# ============================================
+# The Pitch Visualizer - Requirements
+# Challenge 2: AI Intern Assessment
+# ============================================
+
+# Web Framework
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+jinja2==3.1.3
+pydantic==2.6.0
+
+# Environment & Utilities
+python-dotenv==1.0.1
+requests==2.31.0
+
+# LLM (Groq)
+groq==1.1.2
+
+# Image Generation - Hugging Face Diffusers (LOCAL - FREE, Assessment-Compliant)
+diffusers==0.26.3
+transformers==4.38.2
+accelerate==0.27.2
+safetensors==0.4.2
+
+# PyTorch (Required for Diffusers)
+# GPU (CUDA 11.8): pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# CPU: pip install torch torchvision torchaudio
+torch==2.6.0
+torchvision==0.21.0
+torchaudio==2.6.0
+
+# Image Processing
+Pillow==10.2.0
+numpy==1.26.4
+
+# Optional: Fallback APIs
+# Stability AI: pip install stability-sdk
+# Hugging Face Inference: Already covered by requests
