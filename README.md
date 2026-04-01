@@ -92,8 +92,10 @@ The system uses a 4-tier cascading fallback for maximum reliability:
 |--------|-------|------|----------|
 | **Local Stable Diffusion** | 10-20s | FREE | Daily use (PRIMARY) |
 | **Stability AI API** | 5-10s | Paid | High quality fallback |
-| **Hugging Face API** | 20-30s | Free tier | Backup option |
+| **Hugging Face API** | 20-30s | Free tier | **Best for context-aware images** ⭐ |
 | **Pollinations.ai** | 15-30s | FREE | Last resort |
+
+> **💡 Recommendation:** For best results with context-aware images that match your narrative, use `IMAGE_METHOD=huggingface`. The Hugging Face Inference API generates more semantically accurate images compared to local diffusers, which may lack performance on consumer GPUs.
 
 Configure in `.env`:
 ```env
