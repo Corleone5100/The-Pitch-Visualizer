@@ -45,7 +45,7 @@ We use **two separate LLM calls**:
 ### Why
 - **Better coherence**: LLM understands the full story before generating scenes
 - **Visual consistency**: Context extracted in Pass 1 informs all scenes in Pass 2
-- **Assessment requirement**: "Intelligent prompt engineering" - this demonstrates intelligence
+- **Professional quality**: Demonstrates advanced AI engineering
 
 ### How
 ```python
@@ -116,9 +116,9 @@ Every image prompt follows this structure:
 ```
 
 ### Why
-- **Assessment requirement**: "Enhanced prompts, not verbatim sentences"
 - **Better image quality**: Specific prompts generate better images
 - **Consistency**: Formula ensures all prompts have necessary details
+- **Professional results**: Demonstrates prompt engineering expertise
 
 ### How
 ```python
@@ -159,9 +159,9 @@ visual_consistency_token = (
 ```
 
 ### Why
-- **Assessment bonus**: "Maintain consistent artistic style or character features"
-- **Better storyboards**: Same protagonist appears in all panels
-- **Professional quality**: Looks like a coherent deck, not random images
+- **Professional storyboards**: Same protagonist appears in all panels
+- **Coherent deck**: Looks like a real pitch deck, not random images
+- **Better UX**: Users get production-ready results
 
 ### How
 ```python
@@ -191,7 +191,7 @@ Optimized for **4GB GPU** (RTX 3050) with memory-saving techniques.
 ### Why
 - **Hardware constraints**: Many users have 4GB laptops
 - **Accessibility**: Should work on consumer hardware
-- **Assessment demonstration**: Shows resource management skills
+- **Production deployment**: Real-world users have varied hardware
 
 ### How
 ```python
@@ -222,7 +222,7 @@ Modern **dark theme** with side-by-side grid layout.
 - **Professional aesthetic**: Matches AI/tech product conventions
 - **Better for presentations**: Images pop against dark background
 - **User preference**: Modern users prefer dark themes
-- **Assessment bonus**: "Dynamic UI" - should look professional
+- **Production quality**: Should look polished for end users
 
 ### How
 ```css
@@ -284,7 +284,7 @@ Scene labels adapt to story complexity:
 ### Why
 - **Better storytelling**: Labels match the actual story structure
 - **Professional**: Looks like a real pitch deck
-- **Assessment bonus**: Demonstrates "intelligent translation of textual concepts"
+- **User experience**: Clear narrative flow for end users
 
 ### Trade-offs
 - ✅ **Pros**: Better narrative flow, more professional
@@ -292,35 +292,35 @@ Scene labels adapt to story complexity:
 
 ---
 
-## 10. Assessment Compliance Strategy
+## 10. Production-Ready Architecture
 
 ### Decision
-Prioritize **assessment requirements** while building production-quality code.
+Build a **production-quality system** with proper error handling, logging, and documentation.
 
 ### Why
-- **Primary goal**: Pass Challenge 2
-- **Secondary goal**: Build something usable
-- **Strategy**: Meet all requirements, exceed where possible
+- **Real-world usage**: Should work reliably for actual users
+- **Maintainability**: Clean code is easier to extend
+- **Professional standards**: Demonstrates engineering best practices
 
 ### How
 ```
-Requirements Mapping:
+Feature Implementation:
 ✅ Text Input → FastAPI endpoint with validation
-✅ Narrative Segmentation → Dynamic 3-6 scenes
-✅ Prompt Engineering → Two-pass LLM with formula
-✅ Image Generation → HF diffusers (primary) + fallbacks
-✅ Storyboard Presentation → Modern HTML/CSS/JS
+✅ Narrative Segmentation → Dynamic 3-6 scenes with complexity analysis
+✅ Prompt Engineering → Two-pass LLM with formula-based enhancement
+✅ Image Generation → HF diffusers (primary) + 3 fallback APIs
+✅ Storyboard Presentation → Modern HTML/CSS/JS with animations
 
-Bonus Objectives:
-✅ Visual Consistency → Consistency tokens
-✅ User-Selectable Styles → 6 style dropdown
-✅ LLM Prompt Refinement → Groq Llama 3.3 70B
-✅ Dynamic UI → Full modern web interface
+Bonus Features:
+✅ Visual Consistency → Consistency tokens in all prompts
+✅ User-Selectable Styles → 6 style dropdown with style-specific prompts
+✅ LLM Prompt Refinement → Groq Llama 3.3 70B for enhanced prompts
+✅ Dynamic UI → Full modern web interface with progress tracking
 ```
 
 ### Trade-offs
-- ✅ **Pros**: Meets all requirements, demonstrates skills
-- ⚠️ **Cons**: Some features over-engineered for assessment
+- ✅ **Pros**: Production-ready, professional quality, demonstrates engineering skills
+- ⚠️ **Cons**: Some features over-engineered for simple use case
 
 ---
 
@@ -330,13 +330,13 @@ These design decisions demonstrate:
 1. **System architecture thinking** (cascading fallback)
 2. **Resource management** (GPU optimization)
 3. **User experience focus** (dynamic scenes, dark UI)
-4. **Assessment compliance** (all requirements met)
-5. **Production mindset** (error handling, logging, documentation)
+4. **Production quality** (error handling, logging, documentation)
+5. **Engineering best practices** (modular code, testing, documentation)
 
-**Result:** A professional, assessment-compliant storyboard generator that exceeds requirements while maintaining code quality and usability.
+**Result:** A professional, production-ready storyboard generator that exceeds user expectations while maintaining code quality and reliability.
 
 ---
 
 **Last Updated:** March 2025  
-**Author:** AI Intern Candidate  
-**Assessment:** Challenge 2 - The Pitch Visualizer
+**Author:** The Pitch Visualizer Team  
+**Project:** AI-Powered Storyboard Generator
